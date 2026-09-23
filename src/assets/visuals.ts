@@ -1,10 +1,16 @@
-// Visual asset paths for OPS Supply questionnaire (transparent PNGs)
+import pionBleu from './images/pion_bleu_1790154010664.jpg';
+import plateauJeu from './images/plateau_jeu_1790154019927.jpg';
+import crayon from './images/crayon.png';
+import sablier from './images/sablier_1790154031805.jpg';
+import carton from './images/carton_box_1790154042721.jpg';
+import logo from './images/ops_logo_1790154053910.jpg';
+
 export const VISUAL_ASSETS = {
-  pionBleu: '/assets/images/pionbleu.png',
-  plateauJeu: '/assets/images/crayon.png',
-  crayon: '/assets/images/crayon.png',
-  sablier: '/assets/images/sablier.png',
-  carton: '/assets/images/carton.png',
-  logo: '/assets/images/logo_ops_supply.png',
-  logoSymbol: '/assets/images/logo_ops_symbol.png',
+  pionBleu,
+  plateauJeu,
+  crayon,
+  sablier,
+  carton,
+  logo,
+  logoSymbol: logo,
 };
