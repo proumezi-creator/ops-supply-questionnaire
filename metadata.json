@@ -1,0 +1,7 @@
+{
+  "name": "OPS Supply - Où en est la partie chez vous ?",
+  "description": "Questionnaire interactif pour dirigeants et producteurs de produits physiques : 3 minutes pour faire le point sur votre organisation et votre supply chain.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
