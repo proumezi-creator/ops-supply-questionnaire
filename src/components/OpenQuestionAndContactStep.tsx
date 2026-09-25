@@ -106,7 +106,7 @@ export function OpenQuestionAndContactStep({
               Vos coordonnées
             </h3>
             <p className="text-xs text-[#746f68] mb-3.5">
-              Ces informations me permettront de vous adresser mon retour personnalisé par email.
+              Ces informations me permettront de vous adresser mon retour personnel par email.
             </p>
 
             {/* Honeypot field (hidden from real users, catches bots) */}

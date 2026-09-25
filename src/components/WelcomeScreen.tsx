@@ -33,12 +33,12 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           </p>
 
           {/* Compact explanatory block */}
-          <div className="text-xs sm:text-[13px] text-[#132438]/85 leading-relaxed space-y-1 mb-4">
+          <div className="text-xs sm:text-[13px] text-[#132438]/85 leading-relaxed space-y-1.5 mb-4">
             <p>
-              Répondez simplement à partir de votre quotidien. Il n’y a pas de bonne ou de mauvaise réponse.
+              Ce questionnaire vous propose de faire le point sur 4 sujets : votre place de dirigeant, la clarté de l’organisation, l’avancement des sujets et, si cela vous concerne, la supply.
             </p>
             <p>
-              À la fin, vos réponses me seront transmises. Je les regarderai personnellement avant de vous faire un retour par email.
+              Répondez simplement en pensant à votre propre quotidien.
             </p>
           </div>
 

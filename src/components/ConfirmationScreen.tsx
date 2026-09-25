@@ -40,9 +40,12 @@ export function ConfirmationScreen() {
           {CONFIRMATION_DATA.paragraphs.map((p, idx) => (
             <p key={idx}>{p}</p>
           ))}
-          <p className="font-serif font-semibold text-[#132438] pt-1 text-sm sm:text-base">
-            {CONFIRMATION_DATA.signature}
-          </p>
+          <div className="pt-1">
+            <p>{CONFIRMATION_DATA.closing}</p>
+            <p className="font-serif font-semibold text-[#132438] text-sm sm:text-base mt-0.5">
+              {CONFIRMATION_DATA.signature}
+            </p>
+          </div>
         </div>
 
         {/* Return Button */}

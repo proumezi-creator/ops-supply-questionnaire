@@ -2,13 +2,15 @@ import { RotateCcw, Share2 } from 'lucide-react';
 
 interface HeaderProps {
   onReset: () => void;
-  onOpenEmbedModal: () => void;
+  onOpenEmbedModal?: () => void;
+  showEmbedButton?: boolean;
   hasStarted: boolean;
 }
 
 export function Header({
   onReset,
   onOpenEmbedModal,
+  showEmbedButton = false,
   hasStarted,
 }: HeaderProps) {
   return (
@@ -38,15 +40,17 @@ export function Header({
             </button>
           )}
 
-          <button
-            type="button"
-            onClick={onOpenEmbedModal}
-            title="Intégrer sur votre site"
-            className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium text-[#132438] bg-white border border-[#ebdcd0] hover:border-[#d06a4c] rounded-md shadow-2xs transition-colors cursor-pointer"
-          >
-            <Share2 className="w-3 h-3 text-[#d06a4c]" />
-            <span className="hidden sm:inline">Intégrer</span>
-          </button>
+          {showEmbedButton && onOpenEmbedModal && (
+            <button
+              type="button"
+              onClick={onOpenEmbedModal}
+              title="Intégrer sur votre site"
+              className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium text-[#132438] bg-white border border-[#ebdcd0] hover:border-[#d06a4c] rounded-md shadow-2xs transition-colors cursor-pointer"
+            >
+              <Share2 className="w-3 h-3 text-[#d06a4c]" />
+              <span className="hidden sm:inline">Intégrer</span>
+            </button>
+          )}
         </div>
       </div>
     </header>

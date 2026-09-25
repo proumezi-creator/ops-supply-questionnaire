@@ -90,10 +90,22 @@ export default function App() {
 
   // UI modals & submission state
   const [isEmbedModalOpen, setIsEmbedModalOpen] = useState(false);
+  const [showEmbedHelper, setShowEmbedHelper] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   const topAnchorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('embed_tools') || params.has('admin') || params.has('edit')) {
+          setShowEmbedHelper(true);
+        }
+      }
+    } catch {}
+  }, []);
 
   // Sync state to sessionStorage so user never loses answers
   useEffect(() => {
@@ -497,6 +509,7 @@ export default function App() {
         <Header
           onReset={handleReset}
           onOpenEmbedModal={() => setIsEmbedModalOpen(true)}
+          showEmbedButton={showEmbedHelper}
           hasStarted={currentStep > 0 && currentStep < 7}
         />
 
@@ -596,23 +609,29 @@ export default function App() {
             <span>© {new Date().getFullYear()} OPS Supply</span>
             <span>•</span>
             <span>Organisation & Supply Chain</span>
-            <span>•</span>
-            <button
-              type="button"
-              onClick={() => setIsEmbedModalOpen(true)}
-              className="text-[#d06a4c] hover:underline cursor-pointer"
-            >
-              Intégrer ce questionnaire
-            </button>
+            {showEmbedHelper && (
+              <>
+                <span>•</span>
+                <button
+                  type="button"
+                  onClick={() => setIsEmbedModalOpen(true)}
+                  className="text-[#d06a4c] hover:underline cursor-pointer"
+                >
+                  Intégrer ce questionnaire
+                </button>
+              </>
+            )}
           </div>
         </footer>
       </main>
 
       {/* Modals */}
-      <EmbedHelperModal
-        isOpen={isEmbedModalOpen}
-        onClose={() => setIsEmbedModalOpen(false)}
-      />
+      {showEmbedHelper && (
+        <EmbedHelperModal
+          isOpen={isEmbedModalOpen}
+          onClose={() => setIsEmbedModalOpen(false)}
+        />
+      )}
     </div>
   );
 }

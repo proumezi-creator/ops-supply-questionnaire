@@ -13,6 +13,7 @@ export interface QuestionnairePart {
   id: CategoryId;
   partNumber: number;
   title: string;
+  introText?: string;
   shortLabel: string;
   cardName: string;
   iconName: 'crown' | 'compass' | 'hourglass' | 'boxes';

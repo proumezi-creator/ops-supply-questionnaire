@@ -72,6 +72,11 @@ export function PartCardView({
               <h2 className="text-base sm:text-lg font-serif font-bold text-[#132438] leading-snug">
                 {part.title}
               </h2>
+              {part.introText && (
+                <p className="text-xs text-[#746f68] mt-0.5 leading-snug">
+                  {part.introText}
+                </p>
+              )}
             </div>
           </div>
         </div>

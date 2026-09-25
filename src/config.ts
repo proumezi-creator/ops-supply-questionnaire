@@ -18,5 +18,5 @@ export const APP_CONFIG = {
   brandName: "OPS Supply",
   tagline: "Organisation & Supply Chain pour TPE et PME",
   appTitle: "Où en est la partie chez vous ?",
-  appSubtitle: "5 minutes pour faire le point sur votre organisation.",
+  appSubtitle: "5 minutes pour regarder comment fonctionne votre organisation au quotidien.",
 };

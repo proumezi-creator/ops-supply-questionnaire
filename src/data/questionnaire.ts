@@ -29,6 +29,7 @@ export const QUESTIONNAIRE_PARTS: QuestionnairePart[] = [
     id: 'dirigeant',
     partNumber: 1,
     title: 'Le dirigeant est encore au centre du jeu',
+    introText: 'Pour cette partie, pensez à votre propre quotidien de dirigeant.',
     shortLabel: 'Dirigeant au centre',
     cardName: 'Le dirigeant au centre du jeu',
     iconName: 'crown',
@@ -63,6 +64,7 @@ export const QUESTIONNAIRE_PARTS: QuestionnairePart[] = [
     id: 'regles',
     partNumber: 2,
     title: 'Les règles du jeu ne sont pas toujours claires',
+    introText: 'Regardez maintenant comment les rôles, les informations et les façons de faire fonctionnent chez vous.',
     shortLabel: 'Règles du jeu',
     cardName: 'Les règles du jeu',
     iconName: 'compass',
@@ -97,6 +99,7 @@ export const QUESTIONNAIRE_PARTS: QuestionnairePart[] = [
     id: 'sujets',
     partNumber: 3,
     title: 'Certains sujets restent trop longtemps en jeu',
+    introText: 'Pensez aux sujets et projets qui doivent avancer dans votre quotidien.',
     shortLabel: 'Sujets en jeu',
     cardName: 'Certains sujets restent trop longtemps en jeu',
     iconName: 'hourglass',
@@ -131,6 +134,7 @@ export const QUESTIONNAIRE_PARTS: QuestionnairePart[] = [
     id: 'supply',
     partNumber: 4,
     title: 'Côté supply, il manque parfois quelques cartes',
+    introText: 'Si cette partie vous concerne, pensez à la façon dont vous gérez aujourd’hui vos flux, vos stocks et vos approvisionnements.',
     shortLabel: 'Côté supply',
     cardName: 'Côté supply, il manque parfois quelques cartes',
     iconName: 'boxes',
@@ -175,7 +179,7 @@ export const OPEN_QUESTION = {
 };
 
 export const TRANSPARENCY_TEXT =
-  'Vos réponses vont maintenant m’être transmises. Je les regarderai dans leur ensemble avant de vous faire un retour personnel par email.';
+  'Vos réponses vont maintenant m’être transmises. Je les analyserai et je reviendrai vers vous personnellement par email.';
 
 export const CONFIDENTIALITY_NOTICE =
   'Vos coordonnées et vos réponses sont utilisées uniquement pour traiter votre demande et vous recontacter à ce sujet.';
@@ -186,10 +190,9 @@ export const CONFIRMATION_DATA = {
   title: 'C’est dans la boîte !',
   paragraphs: [
     'Merci, j’ai bien reçu vos réponses.',
-    'Je vais les regarder dans leur ensemble, pas seulement additionner les cases.',
-    'Je vous ferai un retour personnel par email sur ce qui ressort et sur le sujet qui mérite, à mon sens, qu’on s’y attarde en premier.',
-    'Gardez un œil sur votre boîte mail.',
+    'Je vais les analyser dans leur ensemble et je reviendrai vers vous personnellement par email avec une première lecture de votre situation et le sujet qui me semble mériter notre attention en premier.',
   ],
+  closing: 'À bientôt,',
   signature: 'Pauline',
   buttonText: 'Revenir au site',
 };
